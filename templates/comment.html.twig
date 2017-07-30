@@ -1,0 +1,46 @@
+<article class="{{ classes }} comment clearfix"{{ attributes }}>
+
+    <header class="comment-author vcard">
+
+        {{ picture }}
+
+        {% if new %}
+            <span class="new">{{ new }}</span>
+        {% endif %}
+
+        <div class="authormeta">
+            {{ title_prefix }}
+            <h3 class="comment-author"{{ title_attributes }}><cite>{{ author }}</cite></h3>
+            {{ title_suffix }}
+            <span class="datetime">
+                <div class="submitted">
+                    {{ permalink }},
+                    {{ submitted_month_ }}
+                    {{ submitted_day_c }}
+                    {{ submitted_year_c }}
+                </div>
+            </span>
+        </div>
+
+    </header>
+
+    <div class="content comment-text"{{ content_attributes }}>
+
+        {{ title_prefix }}
+        <h3{{ title_prefix }}>{{ title }}</h3>
+        {{ title_suffix }}
+
+        <?php // We hide the comments and links now so that we can render them later.
+        hide($content['links']);
+        {{ content }}
+{% if signature %}
+<div class="user-signature clearfix">
+        {{ signature }}
+    </div>
+    <?php endif; ?>
+
+    </div>
+
+    <?php print render($content['links']) ?>
+
+</article>

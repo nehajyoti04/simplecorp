@@ -1,0 +1,28 @@
+name: simplecorp
+type: theme
+base theme: classy
+description: "A simple theme designed for a developer's personal blog."
+# core: 8.x
+screenshot: screenshot.png
+libraries:
+  - simplecorp/global-assets
+regions:
+  header: Header
+  navigation: Navigation
+  top_content: Top Content
+  banner: Banner
+  header_right: Right Header
+  highlighted: Highlighted
+  content: Content
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  bottom_content: 'Bottom Content'
+  help: 'Page Help'
+  sidebar: Sidebar
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2017-01-12
+#version: '8.x-2.x-dev'
+core: '8.x'
+project: 'simplecorp'
+#datestamp: 1484220186

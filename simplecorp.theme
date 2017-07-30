@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Preprocess function for comment.tpl.php.
+ */
+function simplecorp_preprocess_comment(&$variables) {
+  $comment = $variables['comment'];
+  $date_formatter = \Drupal::service('date.formatter');
+  $variables['submitted_day_c'] = $date_formatter->format($comment->created, 'custom', 'jS');
+  $variables['submitted_month_c'] = $date_formatter->format($comment->created, 'custom', 'F');
+  $variables['submitted_year_c'] = $date_formatter->format($comment->created, 'custom', 'Y');
+}
+
+
